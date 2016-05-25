@@ -1,16 +1,18 @@
 body{
 	overflow-x: hidden;
+    font-family: 'Raleway', sans-serif !important;
 }
 a{
     /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Raleway', sans-serif;
 }
 .content{
-	min-height: 500px;
+	/*min-height: 500px;*/
+    padding-bottom: 20px;
 }
 .Contact-content,
 .About-content {
-    padding-top: 20px !important;
+    /*padding-top: 20px !important;*/
 }
 
 /*nav*/
@@ -19,9 +21,8 @@ a{
     width: 100%;
     border-radius: 0px;
 }
-#navbarmenu a,  #logo a {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.navbar-nav {
+    margin: 0px !important;
 }
 /*eof nav*/
 
@@ -72,12 +73,70 @@ footer {
 }
 /*eof contact*/
 /*about*/
+#about-content {
+    padding: 50px 0;
+}
 .photo {
     margin-bottom: 15px;
 }
+#contact-details h2 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+#contact-details ul {
+    margin-bottom: 20px;
+}
+#contact-details {
+    padding: 20px 45px;
+}
+#about-banner {
+    background: #eee;
+    height: 175px;
+}
+#about-banner h3 {
+    margin-top: 75px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+}
 /*eof about*/
+/*home*/
+#welcome {
+    margin: 35px auto 65px !important;
+}
+#welcome h2 {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+#welcome p {
+    line-height: 28px;
+    font-size: 16px;
+}
+#welcome span {
+    font-style: italic;
+    font-weight: 500;
+}
+/*eof home*/
 
 @media (min-width: 767px){
+    #about-banner {
+        height: 250px !important;
+    }
+    #about-banner h3 {
+        margin-top: 100px !important;
+        font-size: 30px !important;
+    }
+    #welcome {
+        margin: 70px auto 100px !important;
+        padding: 0px 150px;
+    }
+    #contact-details {
+        padding: 10px 35px;
+    }
 	#footer-menu li {
 		padding: 20px 0px;
 	}
@@ -93,12 +152,18 @@ footer {
 	#contact-details {
 	    margin-bottom: 0px !important;
 	}
+    #navbarmenu a,  #logo a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 @media (min-width: 992px){
 	#googleMap, #contact-details {
 	    height: 425px !important;
 	}
-  
+    #contact-details {
+        padding: 25px 38px;
+    }
 }
 @media (min-width: 1200px){
    

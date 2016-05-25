@@ -13,7 +13,7 @@
       </a>
     </div>
     <div id="navbarmenu" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">              
+      <ul class="nav navbar-nav navbar-right text-center">              
         <li class="{{ (Request::is('/')) ? 'active' : '' }}">
           <a href="/">Home</a>
         </li>
