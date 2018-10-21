@@ -9,6 +9,7 @@ use Auth;
 use App\Photo;
 use Session;
 use Input;
+use File;
 
 class PhotoController extends Controller
 {
@@ -20,13 +21,27 @@ class PhotoController extends Controller
     public function index()
     {
         //
+        if (Auth::check())
+        {
+            $photos = Photo::get();
+            return view('photos.index')
+                ->withphotos($photos);
+        }
+        else
+        {
+            // Session::flash('flash_message', 'harus login dulu ya');
+            return redirect()->back();
+        }
 
-            
-        $photos = Photo::get();
+    }
 
-            
-        return view('photos.index')
-            ->withphotos($photos);
+    public function gallery()
+    {
+        $count = 0;
+        $photos = Photo::orderByRaw("RAND()")->get();
+        return view('pages.gallery')
+            ->withphotos($photos)
+            ->with('count',$count);
     }
 
     /**
@@ -69,7 +84,7 @@ class PhotoController extends Controller
 
         $file = array('image' => Input::file('image'));
         if (Input::hasFile('image')) {
-            $destinationPath = 'images'; // upload path
+            $destinationPath = 'images/photos'; // upload path
             $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
             //$random = rand(11111,99999);
             $date = date('ymdhi');
@@ -124,8 +139,15 @@ class PhotoController extends Controller
     public function edit($id)
     {
         //
-        $photo = photo::findOrFail($id);
-        return view('photos.edit')->withphoto($photo);
+        if (Auth::check())
+        {
+            $photo = photo::findOrFail($id);
+            return view('photos.edit')->withphoto($photo);
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 
     /**
@@ -175,13 +197,20 @@ class PhotoController extends Controller
     public function destroy($id)
     {
         //
-        $photo = photo::findOrFail($id);
-        $photo->delete();
+        if (Auth::check())
+        {
+            $photo = photo::findOrFail($id);
+            $photo->delete();
 
-        Session::flash('flash_message', 'photo successfully deleted!');
+            Session::flash('flash_message', 'photo successfully deleted!');
 
-        // return redirect()->route('photos.index',['type' => $type]);
-        // return redirect()->back()->back();
-        return redirect('/');
+            // return redirect()->route('photos.index',['type' => $type]);
+            // return redirect()->back()->back();
+            return redirect('/');
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 }

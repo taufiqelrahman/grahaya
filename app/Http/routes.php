@@ -27,7 +27,7 @@ Route::group(['middleware' => ['web']], function () {
 	]);
 	Route::get('gallery',	[
 	'as' => 'gallery',
-	'uses' => 'PagesController@getGallery'
+	'uses' => 'PhotoController@gallery'
 	]);
 	Route::get('contact',	[
 	'as' => 'contact',

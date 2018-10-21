@@ -1,3 +1,11 @@
+/* color patch
+#4D8EB2
+#C2E9FF
+#62C7FF
+#B27321
+#FFDDB1
+*/
+
 body{
 	overflow-x: hidden;
     font-family: 'Raleway', sans-serif !important;
@@ -15,7 +23,20 @@ a{
     /*padding-top: 20px !important;*/
 }
 
+
 /*nav*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white !important;
+    background-color: #4D8EB2 !important;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: white !important;
+    background-color: #4D8EB2 !important;
+}
+.navbar-collapse {
+     padding-right: 0px !important; 
+     padding-left: 0px !important; 
+}
 #main-nav.affix {
     z-index: 99;
     width: 100%;
@@ -35,13 +56,20 @@ a{
     background: white !important;
     border: none !important;
     /*border-bottom: 0.001em solid #eee !important;*/
+    z-index: 9;
 }
 /*eof slide*/
 /*footer*/
+footer a:focus, footer a:hover {
+    color: white !important;
+    background-color: #4D8EB2 !important;
+    text-decoration: none !important;
+}
 footer {
     padding: 40px 0 75px;
     background: #FDFDFD;
     border-top: 0.001em solid #ddd;
+    margin-top: 50px;
 }
 #footer-menu li {
 	padding-top: 10px;
@@ -73,8 +101,16 @@ footer {
 }
 /*eof contact*/
 /*about*/
+#about-point .point {
+    padding: 60px;
+    margin-top: 25px;
+}
+.point span {
+    padding-right: 20px;
+    font-weight: 600;
+}
 #about-content {
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 .photo {
     margin-bottom: 15px;
@@ -93,6 +129,7 @@ footer {
 }
 #about-banner {
     background: #eee;
+    background: url('/images/about-sm.jpg') center;
     height: 175px;
 }
 #about-banner h3 {
@@ -100,6 +137,61 @@ footer {
     color: white;
     text-transform: uppercase;
     letter-spacing: 1pt;
+}
+#about-intro {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+#about-point {
+    margin-bottom: 50px;
+    background: white;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 5px 0 #ddd !important;
+}
+#about-point .point:hover {
+    background: #DEECF5;
+}
+#about-intro p {
+    font-size: 16px;
+    line-height: 26px;
+}
+.point p {
+    line-height: 22px;
+}
+#about-photo,
+#about-call {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+#about-photo p {
+    line-height: 26px;
+    font-size: 16px;
+}
+.photo img {
+    height: 350px;
+    object-fit: fill;
+    width: 100%;
+}
+.photo-desc {
+    position: absolute;
+    bottom: 0;
+    padding: 50px;
+    color: #444;
+    background: rgba(255,255,255,0.8);
+    right: 15px;
+    left: 15px;
+    top: 0;
+    line-height: 25px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.photo-desc p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
 }
 /*eof about*/
 /*home*/
@@ -121,10 +213,59 @@ footer {
     font-weight: 500;
 }
 /*eof home*/
+/*gallery*/
+.thumbnail {
+    /*border: none !important;*/
+}
+.grid-item { 
+    width: 100%; 
+    margin-bottom: 20px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.grid-item img{
+    box-shadow: 0px 0px 5px 0 #ddd !important;
+    border-radius: 2px;
+}
+.grid {
+    /*margin: 0 auto !important;*/
+    /*margin-bottom: 30px;*/
+}
+.grid-item--width2 { 
+    /*width: 40%; */
+}
+.grid-desc {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 15px 20px 15px;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    right: 15px;
+    left: 15px;
+    display: none;
+    line-height: 23px;
+}
+/*eof gallery*/
 
 @media (min-width: 767px){
+    .grid-sizer,
+    .grid-item { 
+        width: 50%; 
+    }
+    .grid-item { 
+        /*width: 400px !important; */
+    }
+    #about-photo,
+    #about-call {
+        padding: 0 150px !important;
+    }
+    #about-intro {
+        padding: 0 120px !important;
+    }
     #about-banner {
         height: 250px !important;
+        margin-bottom: 50px;
+        background: url('/images/about.jpg') center !important;
     }
     #about-banner h3 {
         margin-top: 100px !important;
@@ -163,6 +304,10 @@ footer {
 	}
     #contact-details {
         padding: 25px 38px;
+    }
+    .grid-sizer,
+    .grid-item { 
+        width: 33.333%; 
     }
 }
 @media (min-width: 1200px){

@@ -11,8 +11,11 @@
 				    <h3 class="text-center">{{ $photo->name }}</h3>
 				    <p>{{ $photo->path }}</p>
 				    <p>{{ $photo->desc }}</p>
+				    @if (Auth::check())
 				    <a href="{{ route('photos.show', $photo->id) }}">view</a>
 				    <a href="{{ route('photos.edit', $photo->id) }}">edit</a>
+				    @else
+			        @endif
 				</div>
 			</div>
 		@endforeach

@@ -7,6 +7,7 @@
 <!-- <meta name="csrf-token" content="{{ csrf_token() }}" /> -->
 <title>Grahaya | {{$title}}</title>
 <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/lightbox.min.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
@@ -23,7 +24,7 @@
 <!-- <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'> -->
 </head>
 <body>
-<main>
+<main class="{{$title}}-main">
 	@include('/partials/_nav')
     @if(Request::path() === '/')
         @include('/partials/_slider')
@@ -39,7 +40,7 @@
     @include('/partials/_footer')
 </main>
 
-<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!-- <script type="text/javascript" src="{{ asset('/js/jquery-1.12.1.min.js') }}"></script> -->
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
 <!-- <script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script> -->
@@ -47,7 +48,36 @@
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="/slick/slick.min.js"></script> -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="{{ asset('/js/masonry.pkgd.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/lightbox.min.js') }}"></script>
 <script>
+$(window).load(function(){
+  //gallery
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    // gutter: 20,
+    // fitWidth: true
+    columnWidth: '.grid-item',
+    percentPosition: true
+  });
+
+  //hover on gallery-photos
+  $(".grid-item").mouseenter(function(){
+    $(this).find(".grid-desc").stop().fadeIn();
+      }).mouseleave(function(){
+    $(this).find(".grid-desc").stop().fadeOut();
+      }
+  );
+
+  //hover on about-photos
+  $(".photo").mouseenter(function(){
+    $(this).find(".photo-desc").stop().fadeOut();
+      }).mouseleave(function(){
+    $(this).find(".photo-desc").stop().fadeIn();
+      }
+  );
+});
 //maps
 var myCenter=new google.maps.LatLng(-7.842535, 110.381642);
 var marker;

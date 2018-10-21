@@ -4,7 +4,7 @@
 		<ul class="list-inline text-center">
 			<li class="col-xs-2 col-sm-1 col-xs-offset-2 col-sm-offset-4"><a href="/">Home</a></li>
 			<li class="col-xs-2 col-sm-1"><a href="{{ action("PagesController@getAbout") }}">About</a></li>
-			<li class="col-xs-2 col-sm-1"><a href="{{ action("PagesController@getGallery") }}">Gallery</a></li>
+			<li class="col-xs-2 col-sm-1"><a href="{{ action("PhotoController@gallery") }}">Gallery</a></li>
 			<li class="col-xs-2 col-sm-1"><a href="{{ action("PagesController@getContact") }}">Contact</a></li>
 		</ul>
 		<!-- </div> -->

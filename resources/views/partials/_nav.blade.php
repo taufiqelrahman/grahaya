@@ -21,7 +21,7 @@
           <a href="{{ action("PagesController@getAbout") }}">About</a>
         </li>
         <li class="{{ (Request::is('gallery')) ? 'active' : '' }}">
-          <a href="{{ action("PagesController@getGallery") }}">Gallery</a>
+          <a href="{{ action("PhotoController@gallery") }}">Gallery</a>
         </li>
         <li class="{{ (Request::is('contact')) ? 'active' : '' }}">
           <a href="{{ action("PagesController@getContact") }}">Contact</a>
