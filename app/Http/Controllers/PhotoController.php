@@ -38,7 +38,8 @@ class PhotoController extends Controller
     public function gallery()
     {
         $count = 0;
-        $photos = Photo::orderByRaw("RAND()")->get();
+        // $photos = Photo::orderByRaw("RAND()");
+        $photos = Photo::orderBy('updated_at', 'DSC')->paginate(9);
         return view('pages.gallery')
             ->withphotos($photos)
             ->with('count',$count);

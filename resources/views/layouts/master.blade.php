@@ -53,31 +53,35 @@ Dengan niatan untuk mengamalkan surat Al-Maun sekaligus membuka jalana atau pelu
 <script type="text/javascript" src="{{ asset('/js/lightbox.min.js') }}"></script>
 <script>
 $(window).load(function(){
-  //gallery
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    // gutter: 20,
-    // fitWidth: true
-    columnWidth: '.grid-item',
-    percentPosition: true
-  });
+  if (location.pathname === '/gallery') {
+    //gallery
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+      // gutter: 20,
+      // fitWidth: true
+      columnWidth: '.grid-item',
+      percentPosition: true
+    });
 
-  //hover on gallery-photos
-  $(".grid-item").mouseenter(function(){
-    $(this).find(".grid-desc").stop().fadeIn();
-      }).mouseleave(function(){
-    $(this).find(".grid-desc").stop().fadeOut();
-      }
-  );
+    //hover on gallery-photos
+    $(".grid-item").mouseenter(function(){
+      $(this).find(".grid-desc").stop().fadeIn();
+        }).mouseleave(function(){
+      $(this).find(".grid-desc").stop().fadeOut();
+        }
+    );
+  }
 
-  //hover on about-photos
-  $(".photo").mouseenter(function(){
-    $(this).find(".photo-desc").stop().fadeOut();
-      }).mouseleave(function(){
-    $(this).find(".photo-desc").stop().fadeIn();
-      }
-  );
+  if (location.pathname === '/about') {
+    //hover on about-photos
+    $(".photo").mouseenter(function(){
+      $(this).find(".photo-desc").stop().fadeOut();
+        }).mouseleave(function(){
+      $(this).find(".photo-desc").stop().fadeIn();
+        }
+    );
+  }
 });
 //maps
 var marker;
