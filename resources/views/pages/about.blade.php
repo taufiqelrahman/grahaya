@@ -29,7 +29,7 @@
 			1 juni 2013 kami memulai pembangunan Panti asuhan "GRAHAYA" yang terdiri dari:</p>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
-			<img src="{{ asset('/images/about/1.jpg') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/1.jpg') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Kamar anak asuh (rencana 20 kamar, 20 kamar mandi, 20 tempat cuci yang masing masing kamar
 			    	dapat menampung maksimal 8 anak asuh)</p>
@@ -37,34 +37,34 @@
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
 			<!-- <img src="http://dummyimage.com/650X350/aaa/fff&text=photo2" alt="" class="img-responsive"> -->
-			<img src="{{ asset('/images/about/2.jpg') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/2.jpg') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Rumah ustad penanggung jawab operasional harian panti, terdiri dua kamar tidur, kamar mandi,
 			    	ruang tamu dan kantor. (luas total 6x8 meter)</p>
 		    </div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
-			<img src="{{ asset('/images/about/3.jpg') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/3.jpg') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Dapur Umum dengan tempat cuci, tempat masak dan penyimpanan peralatan. (luas total 6x7
 			    	meter)</p>
 		    </div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
-			<img src="{{ asset('/images/about/4.png') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/4.png') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Pendopo sebagai sarana sosialisasi anak asuh. (luas 11x13 meter)</p>
 		    </div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
-			<img src="{{ asset('/images/about/5.jpg') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/5.jpg') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Masjid sebagai sarana ibadah bersama dengan masyarakat lingkungan (17x24 Mt lantai 1 dan 7 x
 			    	11 lantai 2)</p>
 		    </div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4 photo">
-			<img src="{{ asset('/images/about/6.png') }}" alt="" class="img-responsive">
+			<img src="{{ asset('/images/about/6.png') }}" alt="Grahaya Panti Asuhan" class="img-responsive">
 			<div class="photo-desc">
 			    <p class="text-center">Fasilitas lain yang mendukung tumbuh kembang anak asuh dan lingkungan disekitar panti.</p>
 		    </div>

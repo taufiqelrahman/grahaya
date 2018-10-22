@@ -10,15 +10,13 @@
 		<!-- </div> -->
 	</div>
 	<div id="footer-description" class="hidden">
-		<p>Grahaya adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>
+			Grahaya adalah panti asuhan berlokasi di Jl. Pasopati, Tamanan, Banguntapan, Kauman, Tamanan, Bantul, Daerah Istimewa Yogyakarta 55191.
+			Dengan niatan untuk mengamalkan surat Al-Maun sekaligus membuka jalan/peluang bersama untuk beramal soleh sesuai konsep penciptaan manusia sebagai "rahmatan lil alamin".
+		</p>
 	</div>
 	<div class="copyright text-center">
-		<p>© 2016 Grahaya. All Rights Reserved.</p>
+		<p>© 2018 Grahaya. All Rights Reserved.</p>
 	</div>
 	@if (Auth::check())
 		<div class="text-center">

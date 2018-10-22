@@ -7,7 +7,7 @@
 		@foreach($photos as $photo)
 			<div class="item col-xs-6 col-sm-4 grid-group-item">
 				<div class="thumbnail">
-					<img src="{{ $photo->path }}" class="group list-group-image img-center img-responsive">
+					<img src="{{ $photo->path }}" alt="Grahaya Panti Asuhan" class="group list-group-image img-center img-responsive">
 				    <h3 class="text-center">{{ $photo->name }}</h3>
 				    <p>{{ $photo->path }}</p>
 				    <p>{{ $photo->desc }}</p>

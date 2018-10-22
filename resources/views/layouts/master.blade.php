@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noimageindex"></meta>
 <!-- <meta name="csrf-token" content="{{ csrf_token() }}" /> -->
-<title>Grahaya | {{$title}}</title>
+<title>Grahaya Panti Asuhan | {{$title}}</title>
+<meta name=”description” content=”Grahaya adalah panti asuhan berlokasi di Jl. Pasopati, Tamanan, Banguntapan, Kauman, Tamanan, Bantul, Daerah Istimewa Yogyakarta 55191.
+Dengan niatan untuk mengamalkan surat Al-Maun sekaligus membuka jalana atau peluang bersama untuk beramal soleh sesuai konsep penciptaan manusia sebagai rahmatan lil alamin“/>
 <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/lightbox.min.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -47,7 +49,6 @@
 <!-- <script type="text/javascript" src="{{ asset('/js/fcsaNumber.js') }}"></script> -->
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 <!-- <script type="text/javascript" src="/slick/slick.min.js"></script> -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript" src="{{ asset('/js/masonry.pkgd.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/lightbox.min.js') }}"></script>
 <script>
@@ -79,9 +80,11 @@ $(window).load(function(){
   );
 });
 //maps
-var myCenter=new google.maps.LatLng(-7.842535, 110.381642);
 var marker;
-function initialize() {
+var map;
+function initMap() {
+  if (location.pathname !== "/contact") return;
+  var myCenter=new google.maps.LatLng(-7.842535, 110.381642);
   var mapProp = {
     center:myCenter,
     zoom:14,
@@ -96,7 +99,8 @@ function initialize() {
   });
   marker.setMap(map);
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCNFL8DUPyxCiAYwiFXZS1CFcPFtOQD5Fg&callback=initMap" async defer></script>
 </body>
 </html>
