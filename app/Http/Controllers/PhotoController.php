@@ -39,7 +39,7 @@ class PhotoController extends Controller
     {
         $count = 0;
         // $photos = Photo::orderByRaw("RAND()");
-        $photos = Photo::orderBy('updated_at', 'DSC')->paginate(9);
+        $photos = Photo::orderBy('updated_at', 'DSC')->paginate(6);
         return view('pages.gallery')
             ->withphotos($photos)
             ->with('count',$count);
